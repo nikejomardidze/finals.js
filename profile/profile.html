@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"initial-scale=1.0>
+    <title>document</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+ <body>
+    <nav class="navbar">
+        <ul>
+            <a href="/products/products.html">products</a>
+            <a href="/cart/cart.html">cart(<span id="cartCount">0</span>)</a>
+            <a href="/profile/profile.html">profile</a>
+        </ul>
+    </nav>
+    <h2 id="profile">profile</h2>
+
+    <div class="profile">
+        <p>name:<span id="name"></span> <input id=nameInput style="display:none"></p>
+        <p>email:<span id="email"></span><input id=emailInput style="display:none"></p>
+        <p>registered:<span id="date"></span><input id=dateInput style="display:none"></p>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

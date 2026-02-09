@@ -1,0 +1,151 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 15px;
+    background: #eee;
+  }
+  
+.navbar a {
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: gray;
+}
+
+#productsContainer {
+  display: flex;       
+  flex-wrap: wrap; 
+  gap: 20px;     
+  justify-content: center; 
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.product {
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  flex-grow: 1;
+}
+
+.product .category {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.product .price {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.add-to-cart{
+  padding: 8px 16px;
+  background-color: #cac9c9;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.add-to-cart:hover {
+  background-color: #bfd1e2;
+}
+
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#toast.show {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 12px 20px;
+  }
+
+  .product {
+    width: 260px;
+  }
+    #toast {
+      font-size: 15px;
+      padding: 10px 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .navbar a {
+    font-size: 16px;
+  }
+
+  #productsContainer {
+    gap: 14px;
+    padding: 10px;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .product img {
+    height: 150px;
+  }
+
+  .add-to-cart {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  
+  #toast {
+    font-size: 14px;
+    padding: 8px 16px;
+    bottom: 15px;
+  }
+}

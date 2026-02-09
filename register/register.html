@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"initial-scale=1.0>
+    <title>document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+ <body>
+    <nav class="navbar">
+        <ul>
+            <a href="../products/products.html">products</a>
+            <a href="../cart/cart.html">cart(<span id="cartCount">0</span>)</a>
+            <a href="../profile/profile.html">profile</a>
+        </ul>
+    </nav>
+
+    <form id="registerForm">
+        <h1>register</h1>
+
+        <label for="username:">Username:</label>
+        <input type="text" placeholder="username" id="username">
+        <small class="error" id="userError"></small>
+
+        <label for="email">email:</label>
+        <input type="text" placeholder="email" id="email">
+        <small class="error" id="emailError"></small>
+
+        <label for="password">password:</label>
+        <input type="password" placeholder="password" id="password">
+        <small class="error" id="passwordError"></small>
+
+        <label for="password-repeat">repeat password:</label>
+        <input type="password" placeholder="repeat password" id="password-repeat">
+        <small class="error" id="rePasswordError"></small>
+
+        <button type="submit" id="register">register</button>
+
+        <p>already have an account? <a href="../index/index.html">log here</a></p>
+    </form>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+          <p>form was sent successfully</p>
+          <button id="nextModal">next</button>
+        </div>
+    </div>
+    
+    <script src="register.js"></script>
+ </body>
+</html>
