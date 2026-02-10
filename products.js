@@ -2,16 +2,16 @@ const cartCount = document.getElementById("cartCount");
 const productsContainer = document.getElementById("productsContainer");
 const toast = document.getElementById("toast");
 
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const updateCartCount = () => {
-  cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
+  cart.reduce((sum, item) => {
+    return sum + item.quantity;
+  }, 0);
 };
 
 const showToast = (message) => {
   toast.textContent = message;
   toast.classList.add("show");
-
   setTimeout(() => {
     toast.classList.remove("show");
   }, 1800);

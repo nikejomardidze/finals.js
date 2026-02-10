@@ -76,8 +76,8 @@ const renderCart=()=>{
     orderBtn.addEventListener("click",() =>{
         if(cart.length===0)
         return alert("order was sucessful")
-    localStorage.removeItem("cart")
-    cart.length=0
+      localStorage.removeItem("cart")
+      cart.length=0
          window.location.href="../products/products.html"
     })
 }     

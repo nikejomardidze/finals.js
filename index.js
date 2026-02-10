@@ -39,7 +39,8 @@ form.addEventListener("submit", async (event) => {
         hasError = true;
       }
     
-      if(hasError) return;
+      if(hasError) 
+        return;
       modal.style.display = "flex";
       form.reset();
   });
